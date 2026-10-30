@@ -1,0 +1,4 @@
+create or replace tigger1 tdemo after insert on stud for each row
+begin
+        insert into backup_stud values(:new.name,:new.percentage);
+end;
